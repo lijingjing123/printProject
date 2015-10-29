@@ -1,0 +1,70 @@
+  .pro-list{
+    @at-root .inner-pro-list{
+      @include totalcenter;
+      min-width:$totalwidth;
+      padding-top:20px;
+      position:relative;
+      @at-root .section-title{
+        h3{
+          color: #333;
+          font-size: 24px;
+          font-weight: 200;
+          line-height: 58px;
+        }
+      }
+      @at-root .pro-content{
+          font-size: 0;
+          margin-left:-14px;
+          .pro-item{
+            @include figure-size;
+            @include inline-block;
+            vertical-align: top;
+            position:relative;
+            background:nth($backcolor,2);
+            margin-bottom: 14px;
+            cursor: pointer;
+            &:hover{
+              @include box-hover;
+            }
+            @at-root .pro-item-title{
+              font-size: 14px;
+              padding-top:220px;
+              text-align: center;
+              @include text-overflow;
+              em{
+                color: $linkcolor;
+              }
+              a{
+                color:#666;
+              }
+              a:hover{
+                color:#000;
+              }
+            }
+            @at-root .pro-item-anchor{
+              @include absolute($top:30px);
+              width: 100%;
+              text-align: center;
+              img{
+                height: 150px;
+                width: 150px;
+              }
+            }
+            @at-root .pro-item-price{
+              text-align: center;
+              font-size: 14px;
+              dt{
+                @include inline-block;
+                color: nth($fontType,2);
+                line-height: 24px;
+              }
+              dd{
+                color: $linkcolor;
+                @include inline-block;
+                line-height: 24px;
+              }
+            }
+          }
+      }
+    }
+  }

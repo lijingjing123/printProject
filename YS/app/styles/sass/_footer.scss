@@ -1,0 +1,79 @@
+.wrap-footer{
+  background:#fff;
+  min-width:$totalwidth;
+  @at-root #advantage{
+    @include totalcenter;
+    border-bottom:$border;
+    .inner-advantage{
+      font-size:0;
+      white-space: nowrap;
+      overflow: hidden;
+      *position: relative;
+      padding-top:12px;
+    }
+    figure{
+      position: relative;
+      @include inline-block;
+      width:$totalwidth / 4 - 146px;
+      height:56px;
+      padding:15px 0;
+      padding-left:147px;
+      font-size:16px;
+      @at-root .advantage-item-pic{
+        @include absolute(11px,70px);
+      }
+      @at-root .advantage-item-title,.advantage-item-text{
+        color:#616161;
+        border-right:$border;
+      }
+    }
+    // figure+figure+figure+figure .advantage-item-title,figure+figure+figure+figure .advantage-item-text{
+    //   border-right:none;
+    // }
+  }
+}
+
+#footer{
+  background:#fafafa;
+  @at-root .inner-footer{
+    @include totalcenter;
+    padding:30px 0;
+    @include font(12px,#757575);
+    position: relative;
+    overflow: hidden;
+    small{
+      font-size:100%;
+    }
+    .footer-info{
+      @include inline-block;
+      vertical-align: top;
+      padding-left: 10px;
+    }
+    @at-root .footer-list{
+      @include inline-block;
+      overflow: hidden;
+      position: absolute;
+      right:0;
+      top:auto;
+      
+      a{
+        float:right;
+        margin-left:20px;
+      }
+    }
+    @at-root .footer-logo{
+      @include inline-block;
+      vertical-align: top;
+      img{
+        width:36px;
+        height:36px;
+      }
+    }
+    .footer-support{
+      @include inline-block;
+      position: absolute;
+      top:50px;
+      left:50px;
+    }
+  }
+}

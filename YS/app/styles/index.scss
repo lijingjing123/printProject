@@ -1,0 +1,42 @@
+// bower:scss
+// endbower
+@import "D:/sassCore/base";
+@import "sass/setting";
+@import "sass/topbar";
+@import "sass/header";
+@import "sass/nav";
+@import "sass/show_slide";
+@import "sass/pro_list";
+@import "sass/shop_list";
+@import "sass/order_list";
+@import "sass/help";
+@import "sass/footer";
+@import "sass/common";
+body{
+  font-size:12px;
+}
+.category-nav{
+  *z-index: 40;
+}
+.category-nav .category-list{
+  border:none;
+  display:block;
+  background:#333;
+  background:rgba(0, 0, 0, 0.6);
+  top:60px;
+}
+.category-list-title a{
+  color:#fff;
+  background:url(../images/nav_arrow.png) no-repeat 95% center;
+}
+.category-list-item:hover .category-list-title a{
+   background:#ff6700 url(../images/nav_arrow.png) no-repeat 95% center;
+}
+.category-list-content{
+  box-shadow:0px 8px 16px rgba(0, 0, 0, 0.18);
+  left:234px;
+}
+
+.wrap-container{
+  background:#f5f5f5; 
+} 

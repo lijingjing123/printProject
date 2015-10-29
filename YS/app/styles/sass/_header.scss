@@ -1,0 +1,33 @@
+#header{
+  @include totalcenter;
+  overflow: hidden;
+  padding:22px 0;
+  @at-root h1{
+    float:left;
+    img{
+      height:58px;
+    }
+  }
+  h2{
+    color:$linkcolor;
+    float:left;
+    padding-left: 10px;
+    @include line-height(58px);
+  }
+  @at-root .header-cart{
+    float: right;
+    width: 116px;
+    text-align:center;
+    @include line-height(40px);
+     a{
+       display: block;
+       @include backcolor;
+       margin-top:10px;
+       @include transition;
+    }
+    a:hover{
+      background:darken($linkcolor,10%);
+    }
+  }
+
+}

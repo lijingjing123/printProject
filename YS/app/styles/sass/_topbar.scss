@@ -1,0 +1,32 @@
+/*#顶部*/
+#topbar{
+  background:#333;  
+  @include font(12px,#b0b0b0);
+  @include line-height(40px);
+  min-width:$totalwidth;
+  .inner-topbar{
+    @include totalcenter;
+  }
+  a{
+    color:#b0b0b0;
+  }
+  a:hover{
+    color:#fff;
+  }
+  .topbar-welcome{
+    width:250px;
+    float:left;
+  }
+  @at-root .topbar-tools{
+    float:right;
+    overflow:hidden;
+    color:#424242;
+    li{
+      float:left;
+    }
+    a{
+      padding:0 3px;
+    }
+  }
+}
+/*/顶部*/

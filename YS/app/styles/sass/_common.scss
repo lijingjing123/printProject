@@ -1,0 +1,37 @@
+.page{
+  min-width:1226px;
+}
+em{
+  font-style: normal;
+}
+.more{
+  position:absolute;
+  right: 10px;
+  top:40px;
+  a{
+    font-size:16px;
+    height: 20px;
+    line-height: 20px;
+    color: nth($fontType,2);
+    background:url(../images/more.png) no-repeat right center;
+    padding-right:30px;
+    display: block;
+    &:hover{
+      color: $linkcolor;
+      background:url(../images/more-hover.png) no-repeat right center;
+    }
+  }
+}
+body{
+  font: 14px/1.5 "Microsoft Yahei";
+}
+button{background: none;border: medium none;overflow: visible;padding: 2px; border:none; cursor:pointer;}
+button[type=submit],
+button[type=reset],
+button[type=button]{
+filter:chroma(color=#000000);
+}
+button:click{
+  border:none;
+  padding:0;
+}

@@ -1,0 +1,397 @@
+
+@import "sass/setting";
+@import "sass/pos";
+
+
+.wrap-container{
+  .pro-info{
+    padding:40px 0 50px 0;
+    min-width:$totalwidth;
+    @include totalcenter;
+    @at-root .inner-pro-info{
+      padding-left:560px;
+      position:relative;
+      @at-root .pro-info-title{
+        h3{
+          color: nth($fontType,2);
+          font-size: 28px;
+          line-height: 38px;
+          padding-bottom:25px;
+        }
+      }
+      @at-root .pro-select{
+        .pro-select-list{
+          @at-root .select-list-title{
+            font-size: 0;
+            border-bottom:1px solid $linkcolor;
+            margin-bottom:16px;
+            h4{
+              @include inline-block;
+              font-size: 14px;
+              background: #b0b0b0;
+              width: 60px;
+              @include line-height(36px);
+              margin-right: 10px;
+              text-align: center;
+              color: #fff;
+              font-weight: normal;
+              position:relative;
+              cursor: pointer;
+              &:hover{
+                background:$linkcolor;
+              }
+              &:hover .close{
+                display:block;
+              }
+              .close{
+                display:none;
+                position:absolute;
+                right: 3px;
+                top:3px;
+                width:8px;
+                height:8px;
+                line-height:8px;
+                cursor: pointer;
+              }
+            }
+            .on{
+              background:$linkcolor;
+            }
+            .add{
+              @include inline-block;
+              font-size: 14px;
+              color: $linkcolor;
+              cursor: pointer;
+            }
+          }
+          .select-list-content{
+            @at-root .select-item{
+              font-size: 0px;
+              margin: 0 0 8px 10px;
+              dt{
+                @include inline-block;
+                @include line-height(32px);
+                font-size: 15px;
+                vertical-align: top;
+                width:100px;
+                text-align: right;
+                margin-right:5px;
+              }
+              dd{
+                @include inline-block;
+                font-size: 12px;
+                width: 550px;
+                span{
+                  border:1px solid #e0e0e0;
+                  @include line-height(30px);
+                  margin:0 8px 9px 0;
+                  padding: 0px 6px;
+                  text-align: center;
+                  color: #444;
+                  @include inline-block;
+                  cursor: pointer;
+                  input{
+                    width: 40px;
+                    @include line-height(20px);
+                    border:1px solid #e0e0e0;
+                    margin: 0 4px;
+                    padding:0 5px;
+                  }
+                }
+                .on{
+                  border-color:$linkcolor;
+                  background:url(../Image/select_bg.png) no-repeat right bottom;
+                  box-shadow:0px 4px 8px rgba(0,0,0,0.1);
+                  transform:translate3d(0px,-2px,0px);
+                }
+              }
+            }
+          }
+        }
+        .pro-select-buy{
+          @at-root .buy-number{
+          margin-left:10px;
+          margin-bottom:14px;
+            dt{
+              @include inline-block;
+              @include line-height(32px);
+              font-size: 15px;
+              vertical-align: top;
+              width:100px;
+              text-align: right;
+            }
+            dd{
+              @include inline-block;
+              height: 30px;
+              border:1px solid #e0e0e0;
+              overflow: hidden;
+              .minus,.plus{
+                font-size: 18px;
+                color: #757575;
+                width:30px;
+                text-align: center;
+                float:left;
+                height:100%;
+                cursor: pointer;
+                &:hover{
+                  background:#e0e0e0;
+                }
+              }
+              input{
+                width: 65px;
+                @include line-height(30px);
+                padding: 0px;
+                border-width: 0px;
+                color: #424242;
+                font-size: 14px;
+                text-align: center;
+                vertical-align: middle;
+                float: left;
+              }
+            }
+          }
+          @at-root .buy-total{
+              margin-left:10px;
+            dt{
+              @include inline-block;
+              @include line-height(32px);
+              font-size: 15px;
+              width:100px;
+              text-align: right;
+            }
+            dd{
+              @include inline-block;
+              span{
+                vertical-align: middle;
+                @at-root .buy-price{
+                  // font-family: normal;
+                  color: $linkcolor;
+                
+                  font-size: 15px;
+                  margin-right:5px;
+                }
+              }
+              button{
+                vertical-align: middle;
+                background: $linkcolor;
+                color: #fff;
+                font-size: 14px;
+                text-align: center;
+                border:none;
+                width: 122px;
+                height: 40px;
+                margin-left: 6px;
+                padding:0;
+                &:hover{
+                  background:#F25807;
+                }
+              
+              }
+            }
+          }
+          @at-root .buy-button{
+            margin-top:30px;
+            dd{
+              padding-left:89px;
+              font-size: 0;
+              button{
+                padding:11px 0;
+                margin-right: 10px;
+                width: 202px;
+                font-size: 15px;
+              
+              }
+              .btn-add-cart{
+                background:$linkcolor;
+                border:none;
+                color: #fff;
+                &:hover{
+                  background:#F25807;
+                }
+            
+              }
+              .btn-buy{
+                background:#b0b0b0;
+                border:none;
+                color: #fff;
+                &:hover{
+                  background:#999;
+                }
+              }
+            }
+          }
+        }
+      }
+      @at-root .pro-select-show{
+        @include absolute($top:20px,$left:50px);
+        .pro-show-list{
+          overflow: hidden;
+          height: 450px;
+          @at-root .pro-show-item{
+            a{
+              img{
+                width: 450px;
+                height: 450px;
+              }
+            }
+          }
+        }
+        @at-root .paging{
+          font-size: 0px;
+          margin-top:20px;
+          span{
+            cursor: pointer;
+            padding: 4px;
+            border: 1px solid #E0E0E0;
+            margin-right: 14px;
+            @include inline-block;
+            &:hover{
+              border-color:$linkcolor;
+            }
+            img{
+              width: 60px;
+              height: 60px;
+            }
+          }
+          .on{
+            border-color:$linkcolor;
+          }
+        }
+      }
+    }
+  }
+  .pro-detail{
+    padding-bottom:40px;
+    .inner-pro-detail{
+      background:#fff;
+      @at-root .pro-detail-title{
+        text-align: center;
+        height: 60px;
+        font-size: 0;
+        background:#fff;
+        margin:0 auto;
+        width:100%;
+        white-space:nowrap;
+        h4{
+          @include inline-block;
+          width: 170px;
+          height: 18px;
+          margin-top: 20px;
+          line-height: 18px;
+          text-align: center;
+          font-size: 18px;
+          color: #757575;
+          cursor: pointer;
+          border-right: 1px solid #E0E0E0;
+          font-weight: normal;
+          &:hover{
+            color: $linkcolor;
+          }
+        }
+        .on{
+          color: $linkcolor;
+    
+        }
+      }
+      @at-root .pro-detail-content{
+        min-width: $totalwidth;
+        background:#f8f8f8;
+        padding-bottom:30px;
+        figure{
+          text-align: center;
+          padding-top:30px;
+          @include totalcenter; 
+        }
+      }
+    }
+  }
+}
+
+.pro-offer{
+  *position: relative;
+  background:#F5F5F5;
+  .inner-pro-offer{
+    *position: relative;
+    @include totalcenter;
+    padding-top:50px;
+    padding-bottom:60px;
+  }
+  section{
+    *position: relative;
+    overflow:hidden;
+  }
+  header{
+    position: relative;
+    top:auto;
+    left:auto;
+    border-bottom:$border;
+    height:30px;
+  }
+  h3{
+    width:300px;
+    text-align: center;
+    @include backcolor(#f5f5f5,#b0b0b0);
+    font-size:30px;
+    font-weight: normal;
+    @include line-height(30px);
+    @include absolute(15px,50%,10);
+    margin:0px 0px 0px -150px;
+  }
+  @at-root .pro-param-content{
+    margin-top:40px;
+    background:#fff;
+    font-size:0;
+    padding:50px 0 30px 30px;
+    dl{
+      width:17%;
+      height:44px;
+      margin-right:3%;
+      *margin-right:2%;
+      @include inline-block;
+      font-size:14px;
+      margin-bottom:6px;
+      line-height:20px;
+      overflow:hidden;
+    }
+    dt,dd{
+      display: inline;
+    }
+    dd{
+      color:#666;
+    }
+  }
+
+
+  .pro-offer-list{
+    padding:30px 0;
+  }
+  @at-root .pro-offer-list-content{
+    margin-top:40px;
+    background:#fff;
+    padding:20px;
+    table{
+      width:100%;
+      text-align: center; 
+    }
+    thead th{
+      font-weight: 500;
+      font-size:14px;
+      height:35px;
+      border-bottom:1px solid #f2f2f2;
+    }
+    tbody td{
+      font-size:12px;
+      height:40px;
+    }
+    button{
+      @include backcolor;
+      border:none;
+      padding:0;
+      @include line-height(25px);
+      padding:0 6px;
+    }
+    button:hover{
+      background:#F25807;
+    }
+  }
+}
